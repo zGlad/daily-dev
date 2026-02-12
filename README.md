@@ -1,8 +1,14 @@
-💻 Daily Code & Logic Lab
-📖 ¿Qué es este proyecto?
-Este repositorio es un laboratorio de entrenamiento técnico. No es un producto final, sino una colección curada de soluciones a problemas de lógica, algoritmos y exploración de sintaxis. La idea es documentar mi progreso diario mientras refuerzo los cimientos de la ingeniería de software: pensamiento computacional y eficiencia.
+# 💻 Daily Code & Logic Lab
 
-En el desarrollo profesional, a menudo nos abstraemos demasiado usando frameworks y librerías, lo que puede "oxidar" nuestra capacidad de resolver problemas desde cero. Este repo ataca tres problemas comunes:
-1. La falta de consistencia
-2. La dependencia de herramientas
-3. La brecha teórica: Pone en práctica conceptos de ciencias de la computación 
+Repositorio de entrenamiento técnico dedicado a la implementación de algoritmos, estructuras de datos y exploración de sintaxis pura.
+
+## 📖 Descripción
+Este proyecto funciona como un laboratorio personal de experimentación. El objetivo es documentar el progreso diario mientras se refuerzan los cimientos de la ingeniería de software, priorizando el **pensamiento computacional** y la **eficiencia**.
+
+## 🧩 Problemas que aborda
+En el desarrollo profesional, el uso constante de frameworks y librerías puede "oxidar" la capacidad de resolver problemas desde cero. Este repositorio mitiga:
+1. **Falta de consistencia** 
+2. **Dependencia de herramientas**
+3. **Brecha teórica**
+
+
