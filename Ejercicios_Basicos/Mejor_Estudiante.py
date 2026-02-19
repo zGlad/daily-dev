@@ -13,6 +13,9 @@ def calcular_promedio(estudiante: dict) -> float:
     total_notas = sum(estudiante[materia] for materia in materias)
     return total_notas / len(materias)
 
+
+
+
 def mejor_del_salon(estudiante1: dict, estudiante2: dict, estudiante3: dict, 
                     estudiante4: dict, estudiante5: dict) -> str:
     """
@@ -55,6 +58,8 @@ def mejor_del_salon(estudiante1: dict, estudiante2: dict, estudiante3: dict,
                 
     return mejor_nombre
 
+
+
 # --- CASO DE PRUEBA ---
 
 # Estudiante A: Promedio 4.0
@@ -76,3 +81,4 @@ est5 = {"nombre": "Bernardo", "matematicas": 4.0, "español": 4.0, "ciencias": 4
 ganador = mejor_del_salon(est1, est2, est3, est4, est5)
 
 print(f"El mejor estudiante del salón es: {ganador}")
+
