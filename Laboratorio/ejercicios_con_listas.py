@@ -37,3 +37,20 @@ print("Promedio de la lista:", promedio_lista([1, 2, 3, 4, 5]))
 print("Índice del menor:", menor_posicion_lista([1, 2, 3, 4, 5]))
 print("Búsqueda exitosa (3):", buscar_elemento([1, 2, 3, 4, 5], 3))
 print("Búsqueda fallida (6):", buscar_elemento([1, 2, 3, 4, 5], 6))
+
+def encontrar_mayor(entrada: list) -> int:
+    """Retorna el mayor número de la lista."""
+    # Verificamos que la lista no este vacia
+    if not entrada:
+            return -1 # No hay elementos en la lista, retornamos -1
+        
+    # Asignamos el primer elemento como el mayor    
+    mayor = entrada[0]
+
+    # Recorremos la lista y actualizamos el mayor
+    for i in range(1, len(entrada)):
+        if entrada[i] > mayor:
+            mayor = entrada[i]
+        if entrada[i] < 0: # Si encuentra un negativo, retorna 0
+            return 0
+    return mayor
