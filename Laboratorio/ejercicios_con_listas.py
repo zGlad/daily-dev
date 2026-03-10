@@ -54,3 +54,21 @@ def encontrar_mayor(entrada: list) -> int:
         if entrada[i] < 0: # Si encuentra un negativo, retorna 0
             return 0
     return mayor
+
+def intercalar_palabras(cad1:str, cad2:str) -> str:
+    """Intercala las palabras de dos cadenas de texto."""
+    resultado = ""
+    palabras_1 = cad1.split()
+    palabras_2 = cad2.split()
+
+    for i in range(len(palabras_1)):
+        resultado += f"{palabras_1[i]} {palabras_2[i]} "
+
+    return resultado
+
+# Prueba 
+c_1 = "la casa está cerca rio"
+c_2 = "linda no muy del grande"
+print(intercalar_palabras(c_1, c_2))
+
+
