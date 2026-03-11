@@ -66,9 +66,44 @@ def intercalar_palabras(cad1:str, cad2:str) -> str:
 
     return resultado
 
-# Prueba 
-c_1 = "la casa está cerca rio"
-c_2 = "linda no muy del grande"
-print(intercalar_palabras(c_1, c_2))
+
+def calcular_definitivas(estudiantes:list) -> list:
+    """Calcula la nota definitiva de los estudiantes aproximando"""
+    
+    # Recorremos la lista de diccionarios de estudiantes
+    for estudiante in estudiantes:
+        nota = estudiante["nota"]
+        
+        # Aproximamos la nota segun cada caso
+        if nota >= 4.5: 
+            nota = 5.0
+        elif nota >= 3.5:
+            nota = 4.0
+        elif nota >= 2.5: 
+            nota = 3.0
+        else: 
+            nota = 1.5  
+        
+        # Actualizamos "nota" en el diccionario con la variable local 
+        estudiante["nota"] = nota
+    
+    return estudiantes # Retornamos la lista actualizada
+
+# Prueba de la Función
+print(calcular_definitivas([{"nombre": "Carlos", "nota": 3.9},
+                            {"nombre": "Ana", "nota": 4.6},
+                            {"nombre": "alberto", "nota": 4.0},
+                            {"nombre": "Zulema", "nota": 3.0},
+                            {"nombre": "Bernardo", "nota": 2.0}]))
+        
+        
+        
+        
+            
+        
+        
+        
+    
+    
 
 
