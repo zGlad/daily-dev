@@ -1,4 +1,6 @@
-'''
+# --------------------------------------------------------------------------------------------------------------------
+# EJERICICIO 1
+# -------------------------------------------------------------------------------------------------------------------
 
 def promedio_lista(numeros: list) -> float:
     """Calcula el promedio de los números mayores a cero en una lista."""
@@ -13,6 +15,10 @@ def promedio_lista(numeros: list) -> float:
     # Nota: Podría dar ZeroDivisionError si la lista está vacía o solo tiene negativos
     return sumatoria / total
 
+# --------------------------------------------------------------------------------------------------------------------
+# EJERICICIO 2 
+# --------------------------------------------------------------------------------------------------------------------
+
 def menor_posicion_lista(numeros: list) -> int:
     """Retorna el índice del número más pequeño de la lista."""
     menor = numeros[0]
@@ -23,6 +29,10 @@ def menor_posicion_lista(numeros: list) -> int:
             menor = numeros[i]
             indice = i
     return indice
+
+# --------------------------------------------------------------------------------------------------------------------
+# EJERICICIO 3
+# --------------------------------------------------------------------------------------------------------------------
 
 def buscar_elemento(entrada: list, buscado: int) -> int:
     """
@@ -39,6 +49,10 @@ print("Promedio de la lista:", promedio_lista([1, 2, 3, 4, 5]))
 print("Índice del menor:", menor_posicion_lista([1, 2, 3, 4, 5]))
 print("Búsqueda exitosa (3):", buscar_elemento([1, 2, 3, 4, 5], 3))
 print("Búsqueda fallida (6):", buscar_elemento([1, 2, 3, 4, 5], 6))
+
+# --------------------------------------------------------------------------------------------------------------------
+# EJERICICIO 4
+# --------------------------------------------------------------------------------------------------------------------
 
 def encontrar_mayor(entrada: list) -> int:
     """Retorna el mayor número de la lista."""
@@ -57,7 +71,12 @@ def encontrar_mayor(entrada: list) -> int:
             return 0
     return mayor
 
+# --------------------------------------------------------------------------------------------------------------------
+# EJERICICIO 5
+# --------------------------------------------------------------------------------------------------------------------
+
 def intercalar_palabras(cad1:str, cad2:str) -> str:
+    # sourcery skip: inline-immediately-returned-variable, move-assign-in-block, use-join
     """Intercala las palabras de dos cadenas de texto."""
     resultado = ""
     palabras_1 = cad1.split()
@@ -68,7 +87,9 @@ def intercalar_palabras(cad1:str, cad2:str) -> str:
 
     return resultado
 
-
+# --------------------------------------------------------------------------------------------------------------------
+# EJERICICIO 6
+# --------------------------------------------------------------------------------------------------------------------
 def calcular_definitivas(estudiantes:list) -> list:
     """Calcula la nota definitiva de los estudiantes aproximando"""
     
@@ -98,6 +119,10 @@ print(calcular_definitivas([{"nombre": "Carlos", "nota": 3.9},
                             {"nombre": "Zulema", "nota": 3.0},
                             {"nombre": "Bernardo", "nota": 2.0}]))
 
+# --------------------------------------------------------------------------------------------------------------------
+# EJERICICIO 7
+# --------------------------------------------------------------------------------------------------------------------
+
 def construir_equipo_pokemon(Cantidad: int, Lista_pkmn: list) -> list:
     """
     Determina si Ash puede formar un equipo de Pokémon seudolegendarios.
@@ -126,8 +151,10 @@ def construir_equipo_pokemon(Cantidad: int, Lista_pkmn: list) -> list:
             
     # Si terminamos de recorrer la lista y no completamos la 'Cantidad', retornamos None
     return None
-'''
 
+# --------------------------------------------------------------------------------------------------------------------
+# EJERICICIO 8
+# --------------------------------------------------------------------------------------------------------------------
 def producto_mas_barato(catalogo:dict) -> str:
     """Retorna el producto mas barato del catalogo"""
     # Si el catalogo esta vacio, retornamos un mensaje 
@@ -147,10 +174,41 @@ def producto_mas_barato(catalogo:dict) -> str:
 
 # Prueba de la Función
 print(producto_mas_barato({"p1": 10000, "p2": 20000, "argon": 5000, "uranio": 5000}))
+
+# --------------------------------------------------------------------------------------------------------------------
+# EJERICICIO 9
+# --------------------------------------------------------------------------------------------------------------------
+
+def producto_mas_costoso(carrito_compras:dict) -> str: 
+    "Producto más caro de un carro de compras"
     
+    # Si el carrito de compras esta vacio, retornamos un mensaje
+    if not carrito_compras:
+        return "No hay productos en el carrito"
     
+    # Con la funcion min obtenemos el elemento más barato, pero como se necesita encontrar el más costoso,
+    # hacemos que el precio mayor se convierta en el menor, y sea posible encontrar el elemento menor alfabeticamente
+    return min(carrito_compras, key=lambda x: (-carrito_compras[x],x))
+
+# --------------------------------------------------------------------------------------------------------------------
+# EJERICICIO 10 
+# --------------------------------------------------------------------------------------------------------------------
+
+def valor_carrito_compras(carrito_compras:dict) -> float:
+    "Costo total de un carro de compras"
     
+    # Si el carrito de compras esta vacio, retornamos 0
+    if not carrito_compras:
+        return 0
     
+    # Verificamos los valores del diccionario
+    print(list(carrito_compras.values()))
+    
+    # Sumamos los valores del diccionario y se retorna
+    return sum(carrito_compras.values())
+
+# Prueba de la funcion 
+print(valor_carrito_compras({"Zanahoria": 10000, "Pera": 20000, "Durazno": 5000, "Papaya": 5000}))
     
 
 
