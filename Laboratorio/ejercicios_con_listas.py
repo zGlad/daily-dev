@@ -95,14 +95,40 @@ print(calcular_definitivas([{"nombre": "Carlos", "nota": 3.9},
                             {"nombre": "alberto", "nota": 4.0},
                             {"nombre": "Zulema", "nota": 3.0},
                             {"nombre": "Bernardo", "nota": 2.0}]))
+
+def construir_equipo_pokemon(Cantidad: int, Lista_pkmn: list) -> list:
+    """
+    Determina si Ash puede formar un equipo de Pokémon seudolegendarios.
+    Retorna la lista de nombres si se completa la cantidad, de lo contrario None.
+    """
+    cumplen = []
+    
+    for pokemon in Lista_pkmn:
+        # Calculamos la suma de las 6 estadísticas base
+        suma_stats = (
+            pokemon["vida"] + 
+            pokemon["ataque"] + 
+            pokemon["defensa"] + 
+            pokemon["ataque_especial"] + 
+            pokemon["defensa_especial"] + 
+            pokemon["velocidad"]
+        )
         
+        # Si es seudolegendario (600+), lo añadimos a nuestra lista temporal
+        if suma_stats >= 600:
+            cumplen.append(pokemon["nombre"])
         
-        
-        
+        # Si ya alcanzamos la cantidad exacta requerida, dejamos de buscar
+        if len(cumplen) == Cantidad:
+            return cumplen
             
-        
-        
-        
+    # Si terminamos de recorrer la lista y no completamos la 'Cantidad', retornamos None
+    return None
+
+    
+    
+    
+    
     
     
 
