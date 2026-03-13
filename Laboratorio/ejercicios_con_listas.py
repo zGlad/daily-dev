@@ -1,3 +1,5 @@
+'''
+
 def promedio_lista(numeros: list) -> float:
     """Calcula el promedio de los números mayores a cero en una lista."""
     sumatoria = 0 
@@ -124,8 +126,27 @@ def construir_equipo_pokemon(Cantidad: int, Lista_pkmn: list) -> list:
             
     # Si terminamos de recorrer la lista y no completamos la 'Cantidad', retornamos None
     return None
+'''
 
+def producto_mas_barato(catalogo:dict) -> str:
+    """Retorna el producto mas barato del catalogo"""
+    # Si el catalogo esta vacio, retornamos un mensaje 
+    if not catalogo:
+        return "No hay productos para escoger"
+
+    # Con la funcion min obtenemos el elemento mas barato, tanto el precio como el nombre
+    elemento_mas_barato = min(catalogo, key=lambda x: (catalogo[x], x))
+    print ("Elemento mas barato:", elemento_mas_barato)
     
+    # Buscamos el valor del elemento mas barato en el diccionario
+    precio_mas_barato = catalogo[elemento_mas_barato]
+    print ("precio de " , elemento_mas_barato, ":", precio_mas_barato)
+
+    # Si el precio es mayor a 10000, retornamos None, de lo contrario retornamos el elemento
+    return None if precio_mas_barato > 10000 else elemento_mas_barato
+
+# Prueba de la Función
+print(producto_mas_barato({"p1": 10000, "p2": 20000, "argon": 5000, "uranio": 5000}))
     
     
     
